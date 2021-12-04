@@ -1,0 +1,32 @@
+
+ion-content.background_login{
+    --background: url(../../../assets/background_fire_v1.jpg) 0 0/100% 100% no-repeat;
+    background-size: cover;
+}
+
+#container {
+    height: 100vh;
+}
+
+#cont_title {
+    text-align: center;
+    height: 100vh;
+}
+
+.title_login {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+#cont_title .btn_login {
+    color: #fff;
+    font-weight: 900;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 85%;
+}

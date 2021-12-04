@@ -1,0 +1,47 @@
+<ion-header>
+  <custom-header class="btn_back">
+    <ion-buttons class="btn_back" slot="start">
+      <ion-back-button></ion-back-button>
+     </ion-buttons>
+    <app-header [pageTitle]="pageTitle"></app-header> 
+  </custom-header>
+</ion-header>
+
+<ion-content fullscreen class="background_clima">
+  <ion-card id="content-clima">
+
+    <!-- Formulario -->
+    <form (submit)="submitLocation(nombreCiudad, codigoPais)">
+      <ion-item class="item-color" lines="full">
+        <ion-label position="floating">Nombre Ciudad</ion-label>
+        <ion-input type="text" placeholder="ejemplo: Santiago" #nombreCiudad required></ion-input>
+      </ion-item>
+
+      <ion-item class="item-color" lines="full">
+        <ion-label position="floating">Codigo ciudad</ion-label>
+        <ion-input type="text" placeholder="ejemplo: cl" #codigoPais required></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="danger" expand="block">Obtener el clima</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-card>
+
+  <ion-card id="content-clima">
+    <!-- Datos a mostrar de la API -->
+    <ion-item *ngIf="clima" class="data-clima">
+      <ion-card-content *ngIf="clima">
+        <p><span>Datos: {{clima.name}} - {{clima.sys.country}}</span></p>
+        <p><span>Temperatura: </span> {{clima.main.temp}}</p>
+        <p><span>Latitude: </span> {{clima.coord.lat}}</p>
+        <p><span>Longitude: </span> {{clima.coord.lon}}</p>
+        <p><span>Humedad: </span> {{clima.main.humidity}}</p>
+        <p><span>Presión: </span> {{clima.main.pressure}}</p>
+        <p><span>Descripcion: </span>{{clima.weather[0].description}}</p>
+      </ion-card-content>
+    </ion-item>
+  </ion-card>
+</ion-content>

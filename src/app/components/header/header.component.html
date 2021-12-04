@@ -1,0 +1,19 @@
+<ion-grid id="bg_header">
+  <ion-toolbar id="content-tolobar" class="ion-no-border">
+    <ion-row>
+        <!-- Columna 1 -->
+        <ion-col id="content-title" size="12">
+          <ion-buttons slot="start">
+            <ng-content></ng-content>
+          </ion-buttons>
+          <ion-title class="title-header">{{ pageTitle }}</ion-title>
+        </ion-col>
+  
+        <!-- Columna 2
+        <ion-col id="content-logo" size="12">
+          <img class="logo" src="./assets/title_pokemon.png" alt="Logo">
+        </ion-col>
+        -->
+    </ion-row>
+  </ion-toolbar>
+  </ion-grid>

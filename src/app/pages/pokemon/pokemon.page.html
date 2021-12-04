@@ -1,0 +1,123 @@
+<ion-header>
+  <custom-header class="btn_back">
+    <ion-buttons class="btn_back" slot="start">
+      <ion-back-button></ion-back-button>
+     </ion-buttons>
+    <app-header [pageTitle]="pageTitle"></app-header> 
+  </custom-header>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list lines="full">
+    <form [formGroup]="mainForm" (ngSubmit)="storeData()">
+      <!-- Item nombre-->
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input formControlName="nombre" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item tipo-->
+      <ion-item>
+        <ion-label position="floating">Tipo</ion-label>
+        <ion-input formControlName="tipo" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item genero-->
+      <ion-item>
+        <ion-label position="floating">Genero</ion-label>
+        <ion-input formControlName="sexo" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item categoria-->
+      <ion-item>
+        <ion-label position="floating">Categoria</ion-label>
+        <ion-input formControlName="categoria" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item altura-->
+      <ion-item>
+        <ion-label position="floating">Altura</ion-label>
+        <ion-input formControlName="altura" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item ataque-->
+      <ion-item>
+        <ion-label position="floating">ataque</ion-label>
+        <ion-input formControlName="ataque" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item defensa-->
+      <ion-item>
+        <ion-label position="floating">defensa</ion-label>
+        <ion-input formControlName="defensa" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item vida-->
+      <ion-item>
+        <ion-label position="floating">Vida</ion-label>
+        <ion-input formControlName="ps" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item velocidad-->
+      <ion-item>
+        <ion-label position="floating">Velocidad</ion-label>
+        <ion-input formControlName="velocidad" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item fotografia-->
+      <ion-item>
+        <ion-label position="floating">Fotografia</ion-label>
+        <ion-input formControlName="fotografia" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- BTN -->
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" expand="block">
+            Registrar Pokemon
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+
+  <ion-list>
+    <ion-header class="title-crud">
+      <img class="title_login" src="./assets/title_pokemon.png" alt="Titulo">
+    </ion-header>
+
+    <ion-grip *ngFor="let pokemon of Data">
+        <div class="card-crud" size="12" size-md>
+          <ion-row>
+            <ion-col size="3">
+              <span class="name-crud">{{ pokemon.nombre }}</span><br>
+              <div class="photo">
+                  <img src="{{ pokemon.fotografia }}" alt="">
+              </div>
+              </ion-col>
+            <ion-col size="9">
+              <ion-row class="card-pokemon">
+                <ion-col size="6"><strong>Tipo: </strong><span class="content-pokemon">{{ pokemon.tipo }}</span></ion-col>
+                <ion-col size="6"><strong>Genero: </strong><span class="content-pokemon">{{ pokemon.sexo }}</span></ion-col>
+              </ion-row>
+              <ion-row class="card-pokemon">
+                <ion-col size="4"><strong>Catg: </strong><span class="content-pokemon">{{ pokemon.categoria }}</span></ion-col>
+                <ion-col size="4"><strong>Altura: </strong><span class="content-pokemon">{{ pokemon.altura }}</span></ion-col>
+                <ion-col size="4"><strong>Ataque: </strong><span class="content-pokemon">{{ pokemon.ataque }}</span></ion-col>
+              </ion-row>
+              <ion-row class="card-pokemon">
+                <ion-col size="4"><strong>Defensa: </strong><span class="content-pokemon">{{ pokemon.defensa }}</span></ion-col>
+                <ion-col size="4"><strong>Vida: </strong><span class="content-pokemon">{{ pokemon.ps }}</span></ion-col>
+                <ion-col size="4"><strong>Velocidad: </strong><span class="content-pokemon">{{ pokemon.velocidad }}</span></ion-col>
+              </ion-row> 
+            </ion-col>
+          </ion-row> 
+          <div class="item-note">
+            <ion-icon name="create-outline" style="zoom: 1.5;" [routerLink]="['/modificar/',pokemon.id]"></ion-icon>
+            <ion-icon name="trash-outline" style="zoom: 1.5;" (click)="deletePokemon(pokemon.id)"></ion-icon>
+          </div>
+        </div>
+    </ion-grip>
+  </ion-list>
+
+</ion-content>

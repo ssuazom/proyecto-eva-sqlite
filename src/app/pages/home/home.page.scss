@@ -1,0 +1,29 @@
+ion-content.background_home{
+  --background: url(../../../assets/background_home_v1.jpg) 0 0/100% 100% no-repeat;
+  background-size: cover;
+}
+
+.bienvenida {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.bienvenida ion-card-title, ion-card-subtitle {
+  color: #ffffff;
+}
+
+.bienvenida ion-card-title {
+  font-weight: 600;
+  font-family: Black!important; 
+}
+
+.bienvenida ion-card-content, ion-card-subtitle {
+  font-weight: 600;
+  font-family: Regular!important; 
+}
+
+
+.btn_home_clima {
+  background-color: transparent;
+  box-shadow: none;
+}

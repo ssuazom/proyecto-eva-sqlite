@@ -1,0 +1,23 @@
+ion-content.background_list{
+    --background: url(../../../assets/background_list_v1.jpg) 0 0/100% 100% no-repeat;
+    background-size: cover;
+  }
+
+#content-list {
+  background-color: transparent!important;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#content-list ion-avatar img {
+  width: 100%;
+}
+
+#content-list ion-item {
+  margin: 5px 0;
+  background-color: #1c1c1d;
+}
+
+.content-poke {
+    text-align: center;
+}

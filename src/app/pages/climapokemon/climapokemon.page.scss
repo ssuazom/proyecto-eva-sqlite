@@ -1,0 +1,32 @@
+
+ion-content.background_clima{
+    --background: url(../../../assets/background_clima_v1.gif) 0 0/100% 100% no-repeat;
+    background-size: cover;
+}
+
+#content-clima {
+    text-align: center;
+    background-color: #ffffff;
+}
+
+#content-clima img {
+    padding: 20px 10px;
+}
+
+.background_clima form .item-color {
+    --background: #1e1e1e!important;
+    color: #ffffff;
+}
+
+#content-clima .data-clima ion-card-content p span {
+    color: #ff4961;
+    font-weight: 900;
+}
+
+#content-clima .data {
+    background-color: #fff;
+    width: 100%;
+    font-weight: 800;
+    text-align: center;
+    border-radius: 10px;
+}

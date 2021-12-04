@@ -1,0 +1,83 @@
+<ion-header>
+  <custom-header class="btn_back">
+    <ion-buttons class="btn_back" slot="start">
+      <ion-back-button></ion-back-button>
+     </ion-buttons>
+    <app-header [pageTitle]="pageTitle"></app-header> 
+  </custom-header>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="editForm" (ngSubmit)="updatePokemon()">
+      <!-- Item nombre-->
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input formControlName="nombre" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item tipo-->
+      <ion-item>
+        <ion-label position="floating">Tipo</ion-label>
+        <ion-input formControlName="tipo" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item genero-->
+      <ion-item>
+        <ion-label position="floating">Genero</ion-label>
+        <ion-input formControlName="sexo" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item categoria-->
+      <ion-item>
+        <ion-label position="floating">Categoria</ion-label>
+        <ion-input formControlName="categoria" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item altura-->
+      <ion-item>
+        <ion-label position="floating">Altura</ion-label>
+        <ion-input formControlName="altura" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item ataque-->
+      <ion-item>
+        <ion-label position="floating">ataque</ion-label>
+        <ion-input formControlName="ataque" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item defensa-->
+      <ion-item>
+        <ion-label position="floating">defensa</ion-label>
+        <ion-input formControlName="defensa" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item vida-->
+      <ion-item>
+        <ion-label position="floating">Vida</ion-label>
+        <ion-input formControlName="ps" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item velocidad-->
+      <ion-item>
+        <ion-label position="floating">Velocidad</ion-label>
+        <ion-input formControlName="velocidad" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- Item fotografia-->
+      <ion-item>
+        <ion-label position="floating">Fotografia</ion-label>
+        <ion-input formControlName="fotografia" type="text" requiered></ion-input>
+      </ion-item>
+
+      <!-- BTN -->
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="primary" shape="full" expand="block">
+            Modificar Pokemon
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>

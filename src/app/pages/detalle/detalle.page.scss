@@ -1,0 +1,17 @@
+ion-content.background_list{
+    --background: url(../../../assets/background_list_v1.jpg) 0 0/100% 100% no-repeat;
+    background-size: cover;
+  }
+
+.content-poke {
+  text-align: center;
+}
+
+.card_tipe {
+  width: 80%;
+  margin: 0 auto;
+  background-color: #ff4961;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 100px;
+}

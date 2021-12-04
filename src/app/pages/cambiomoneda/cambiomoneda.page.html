@@ -1,0 +1,94 @@
+<ion-header>
+  <custom-header class="btn_back">
+    <ion-buttons class="btn_back" slot="start">
+      <ion-back-button></ion-back-button>
+     </ion-buttons>
+    <app-header [pageTitle]="pageTitle"></app-header> 
+  </custom-header>
+</ion-header>
+
+<ion-content padding class="background_cambio" id="content-cambio">
+<ion-grid>
+  <ion-row >
+    <ion-col size="6" class="box_cambio">
+      <ion-label (click) = "limpiarPesoUsd()">$</ion-label>
+      <!--<ion-input type="number" [(ngModel)]="fromVal1" class="value-input" placeholder="$"></ion-input>
+      -->
+      <ion-input type="number" [(ngModel)]="fromVal1" class="value-input" placeholder="$" (keyup)="dePeso()"></ion-input>
+      <!--<ion-button ion-button (click) = "dePeso()" icon-start large round color="dark">$ => USD </ion-button>
+      -->
+      <ion-range color="dark" pin="true"  
+          min="1"
+          max="10000"
+          pin="true"
+          snaps="true"
+          step="100"
+          (ionBlur)="onPeso($event)"
+          (ionChange)="onPeso($event)"
+          (ionFocus)="onPeso($event)"
+      >
+      </ion-range>
+      
+    </ion-col>
+    <ion-col size="6" class="box_cambio">
+        <ion-label (click) = "limpiarPesoUsd()">USD</ion-label>
+        <ion-input type="number" [(ngModel)]="toVal1" class="value-input" placeholder="USD" (keyup)="aDolar()"></ion-input>
+        <!--<ion-button ion-button (click) = "aDolar()" icon-start large round color="dark"> USD => $ </ion-button>
+        -->
+          <ion-range color="dark" pin="true"  
+            min="1"
+            max="10000"
+            pin="true"
+            snaps="true"
+            step="100"
+            (ionBlur)="onDolar($event)"
+            (ionChange)="onDolar($event)"
+            (ionFocus)="onDolar($event)"
+            >
+        </ion-range>
+
+    </ion-col>
+    <ion-col size="6" class="box_cambio">
+      <ion-label (click) = "limpiarPesoEuro()">$</ion-label>
+      <ion-input type="number" [(ngModel)]="fromVal2" class="value-input" placeholder="$" (keyup)="dePeso2()"></ion-input>
+     <!-- <ion-button ion-button (click) = "dePeso2()" icon-start large round color="dark"> $ => EU </ion-button>
+     -->
+      <ion-range color="dark" pin="true"  
+          min="1"
+          max="10000"
+          pin="true"
+          snaps="true"
+          step="100"
+          (ionBlur)="onPeso2($event)"
+          (ionChange)="onPeso2($event)"
+          (ionFocus)="onPeso2($event)"
+          >
+      </ion-range>
+
+  </ion-col>
+    <ion-col size="6" class="box_cambio">
+      <ion-label (click) = "limpiarPesoEuro()">EU</ion-label>
+      <ion-input type="number" [(ngModel)]="toVal2" class="value-input" placeholder="EURO" (keyup)="aEuro()"></ion-input>
+      <!--<ion-button ion-button (click) = "aEuro()" icon-start large round color="dark"> EU => $ </ion-button>
+      -->
+        <ion-range color="dark" pin="true"  
+          min="1"
+          max="10000"
+          pin="true"
+          snaps="true"
+          step="100"
+          (ionBlur)="onEuro($event)"
+          (ionChange)="onEuro($event)"
+          (ionFocus)="onEuro($event)"
+          >
+      </ion-range>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>
+
+<!--
+  Prueba con Range
+-->
+
+</ion-content>

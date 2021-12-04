@@ -1,0 +1,23 @@
+<ion-header>
+  <custom-header class="btn_back">
+    <ion-buttons class="btn_back" slot="start">
+      <ion-back-button></ion-back-button>
+     </ion-buttons>
+    <app-header [pageTitle]="pageTitle"></app-header> 
+  </custom-header>
+</ion-header>
+
+<ion-content class="background_list">
+  <ion-card class="content-poke" (click)='goToDetallePokemon(pokemon)'>
+    <img [src]="pokemon.sprites.front_default" alt="Pokemon" />
+    <ion-card-header>
+      <ion-card-subtitle class="card_tipe"><span>Tipo:</span> {{ pokemon.types[0].type.name }}</ion-card-subtitle>
+      <ion-card-title>{{ pokemon.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div><span>Altura:</span> {{ pokemon.height}}</div>
+      <div><span>Vida:</span> {{ pokemon.stats[0].base_stat }}</div>
+      <div><span>Ataque:</span> {{ pokemon.stats[1].base_stat }}</div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

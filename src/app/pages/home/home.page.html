@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <app-header [pageTitle]="pageTitle"></app-header>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background_home">
+  <div>
+    <!-- Card1 -->
+      <ion-card class="bienvenida">
+        <ion-card-header>
+          <ion-card-subtitle>Nombre usuario</ion-card-subtitle>
+          <ion-card-title>Bienvenido</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        </ion-card-content>
+      </ion-card>
+
+      <!-- Btn Clima -->
+      <ion-card class="btn_home_clima">
+        <ion-button [routerLink]="['/climapokemon']" class="ion-no-border" color="danger" expand="block"><ion-icon slot="start" name="sunny-outline"></ion-icon>Ir a Clima Pokemon</ion-button>
+      </ion-card>
+
+      <!-- Btn conversor -->
+      <ion-card class="btn_home_clima">
+        <ion-button [routerLink]="['/cambiomoneda']" class="ion-no-border" color="danger" expand="block"><ion-icon slot="start" name="cash-outline"></ion-icon>Ir a Cambio Pokemon</ion-button>
+      </ion-card>
+
+      <!-- Btn listado -->
+      <ion-card class="btn_home_clima">
+        <ion-button [routerLink]="['/listado']" class="ion-no-border" color="danger" expand="block"><ion-icon slot="start" name="list-outline"></ion-icon>Ir al Listado Pokemon</ion-button>
+      </ion-card>
+
+      <!-- Btn listado -->
+      <ion-card class="btn_home_clima">
+        <ion-button [routerLink]="['/pokemon']" class="ion-no-border" color="danger" expand="block"><ion-icon slot="start" name="people-outline"></ion-icon> Ir al Mantenedor</ion-button>
+      </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "proyecto-eva-sqlite",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
